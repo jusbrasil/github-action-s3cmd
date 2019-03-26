@@ -6,7 +6,17 @@ Executes s3cmd with arguments listed in the Action's `args`.
 
 ```
 action "Shell" {
-  uses = "jusbrasil/actions-s3cmd/s3cmd@master"
+  uses = "jusbrasil/github-action-s3cmd@master"
+  args = ["ls"]
+  secrets = ["ACCESS_KEY", "SECRET_KEY"]
+}
+```
+
+Or with docker image:
+
+```
+action "Shell" {
+  uses = "docker://jusbrasil/s3cmd-action:master"
   args = ["ls"]
   secrets = ["ACCESS_KEY", "SECRET_KEY"]
 }
