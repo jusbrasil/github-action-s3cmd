@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM ubuntu:latest
 
 LABEL "name"="s3cmd"
 LABEL "maintainer"="Jusbrasil Dev Team <dev@jusbrasil.com.br>"
